@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flying text</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.4)
+          ),
+          /* url(village.jpg); */ url(space.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+        text-align: center;
+        width: 100vw;
+        font-weight: 700;
+        overflow: hidden;
+        font-family: "lato", sans-serif;
+      }
+
+      .content {
+        font-size: 4em;
+        margin: 40vh auto;
+        height: 20vh;
+        text-transform: uppercase;
+      }
+
+      .content span {
+        display: block;
+        font-size: 0.4em;
+        opacity: 0.8;
+      }
+
+      .content div {
+        position: fixed;
+        margin: 2vh 0;
+        opacity: 0;
+        /* left: 10vw; */
+        width: 100vw;
+        animation: animate 32s linear infinite;
+      }
+
+      .content div:nth-child(2) {
+        animation-delay: 4s;
+      }
+      .content div:nth-child(3) {
+        animation-delay: 8s;
+      }
+      .content div:nth-child(4) {
+        animation-delay: 12s;
+      }
+      .content div:nth-child(5) {
+        animation-delay: 16s;
+      }
+      .content div:nth-child(6) {
+        animation-delay: 20s;
+      }
+      .content div:nth-child(7) {
+        animation-delay: 24s;
+      }
+      .content div:nth-child(8) {
+        animation-delay: 28s;
+      }
+
+      @keyframes animate {
+        0% {
+          opacity: 0;
+          filter: blur(20px);
+          transform: scale(12);
+        }
+        3% {
+          opacity: 1;
+          filter: blur(0px);
+          transform: scale(1);
+        }
+        10% {
+          opacity: 1;
+          filter: blur(0px);
+          transform: scale(0.9);
+        }
+        13% {
+          opacity: 0;
+          filter: blur(10px);
+          transform: scale(0.1);
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div><span>The Phantom Menace</span>ıt is a period</div>
+      <div>of civil war<span>Rebel spaceships, </span></div>
+      <div>striking from a hidden base, <span>have won their first</span></div>
+      <div><span>victory against</span>the evil galactic empire.</div>
+      <div><span>During</span>the battle,</div>
+      <div>Rebel spies managed<span>to steal secret plans </span></div>
+      <div>to the Empire's <span>ultimate weapon.</span></div>
+    </div>
+  </body>
+</html>
